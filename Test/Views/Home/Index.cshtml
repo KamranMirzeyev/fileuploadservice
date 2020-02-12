@@ -1,0 +1,43 @@
+﻿@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+<body>
+    <section id="app">
+        <div class="transfer">
+            <form method="POST" enctype="multipart/form-data" asp-action="create">
+                <div class="custom-file">
+                    <input type="file" name="file" class="custom-file-input" id="file">
+                    <label class="custom-file-label" for="file">Add your file</label>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="EmailTo">Email to</label>
+                    <input type="email" class="form-control" name="to" id="EmailTo"
+                           placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="YourEmail">Your email</label>
+                    <input type="email" class="form-control" name="from" id="YourEmail"
+                           placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="Message">Message</label>
+                    <textarea type="email" class="form-control" name="message" id="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-block btn-primary">Transfer</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
